@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     var token = await UserInfo().getToken();
     if (token != null) {
       setState(() {
-        page = const ProdukPage();
+        page =  ProdukPage();
       });
     } else {
       setState(() {
@@ -39,6 +39,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(brightness: Brightness.light,primaryColor: Colors.black),
       title: 'Toko Kita',
       debugShowCheckedModeBanner: false,
       home: page,

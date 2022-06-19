@@ -84,6 +84,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget _buttonLogin() {
     return ElevatedButton(
         child: const Text("Login"),
+        style: ElevatedButton.styleFrom(
+          primary: Colors.grey,
+        ),
         onPressed: () {
           var validate = _formKey.currentState!.validate();
           if (validate) {
